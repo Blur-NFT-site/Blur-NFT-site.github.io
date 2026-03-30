@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Blur NFT Marketplace — Pro Trading Guide: Bidding, Sweeping, BLUR Token &amp; How It Works (2026)</title>
+  <meta name="description" content="Complete Blur NFT marketplace guide (2026): how Blur's pro trading features work, sweeping and bidding mechanics, BLUR token and airdrop seasons, royalties policy, Blend lending protocol, portfolio analytics, how Blur compares to OpenSea, and a deep FAQ for NFT traders.">
+  <meta name="author" content="Crypto Finance Experts">
+  <link rel="canonical" href="https://blur-nft-guide.example.com/">
+  <link rel="icon" type="image/jpeg" href="bl.jpg">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://blur-nft-guide.example.com/">
+  <meta property="og:title" content="Blur NFT Marketplace — Pro Trading Guide: Bidding, Sweeping &amp; BLUR Token (2026)">
+  <meta property="og:description" content="Practical Blur NFT guide: sweeping, collection bidding, BLUR token, Blend NFT lending, royalties, portfolio tools, and comparison with OpenSea.">
+  <meta property="og:image" content="cover.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blur NFT Marketplace — Pro Trader Guide (2026)">
+  <meta name="twitter:description" content="How Blur NFT marketplace works, sweeping mechanics, BLUR token airdrop, Blend NFT lending, royalties, and pro trading strategies for 2026.">
+
+  <style>
+    :root {
+      --o:    #FF8700;
+      --o2:   #E07600;
+      --o3:   #C06400;
+      --oa:   #FFB347;
+      --ob:   #FFE0B2;
+
+      --ink:   #FFF8F0;
+      --sub:   #FFE0B2;
+      --muted: #94A3B8;
+      --dim:   #64748B;
+
+      --bg:    #08050A;
+      --card:  rgba(255,255,255,.028);
+      --line:  rgba(255,255,255,.07);
+      --lo:    rgba(255,135,0,.13);
+
+      --ok:   #34D399;
+      --warn: #FBBF24;
+      --err:  #F87171;
+
+      --r:  12px;
+      --rl: 18px;
+      --gap: 1.2rem;
+      --sh: 0 8px 28px rgba(0,0,0,.58);
+      --sho: 0 4px 22px rgba(255,135,0,.13);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+    html { scroll-behavior: smooth }
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      background-image:
+        radial-gradient(ellipse 900px 520px at 0%   0%,  rgba(224,118,0,.11), transparent 55%),
+        radial-gradient(ellipse 700px 400px at 100% 8%,  rgba(255,135,0,.06), transparent 50%),
+        radial-gradient(ellipse 600px 360px at 50%  98%, rgba(192,100,0,.07), transparent 55%);
+      color: var(--muted);
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    a { color: var(--oa); text-decoration: none }
+    a:hover { text-decoration: underline }
+    img { max-width: 100%; height: auto; display: block }
+    strong { color: #FFE0B2; font-weight: 600 }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 1.4rem }
+
+    h1,h2,h3,h4 { color: var(--ink); line-height: 1.25 }
+    h1 { font-size: clamp(2rem,5vw,3.1rem); font-weight: 800; letter-spacing: -.4px }
+    h2 { font-size: clamp(1.25rem,2.5vw,1.75rem); font-weight: 700; margin-top: 1.8rem; padding-top: .7rem; border-top: 1px solid var(--line) }
+    h3 { font-size: 1.08rem; font-weight: 700; color: var(--sub) }
+    p,li,td,th { font-size: 1rem; line-height: 1.75 }
+    .lead { font-size: 1.08rem; color: #FFCC80 }
+
+    /* HERO */
+    header.hero {
+      padding: clamp(2.5rem,6vw,5rem) 0 clamp(2rem,4vw,3.5rem);
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-card {
+      background: rgba(224,118,0,.05);
+      border: 1px solid var(--lo);
+      border-radius: var(--rl);
+      padding: clamp(1.4rem,3.5vw,2.4rem);
+      box-shadow: var(--sh), var(--sho);
+      position: relative; overflow: hidden;
+    }
+    .hero-card::after {
+      content: '';
+      position: absolute; top: 0; left: 10%; right: 10%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,135,0,.55), transparent);
+    }
+
+    .brand-row { display: flex; align-items: center; gap: .9rem; margin-bottom: 1rem }
+    .brand-logo {
+      width: 54px; height: 54px; border-radius: 13px;
+      border: 1px solid rgba(255,135,0,.26);
+      background: rgba(224,118,0,.10);
+      padding: .3rem; object-fit: contain;
+      box-shadow: 0 4px 14px rgba(255,135,0,.20);
+      flex: 0 0 auto;
+    }
+    .brand-label { color: var(--dim); font-size: .85rem; font-weight: 600; text-transform: uppercase; letter-spacing: .4px }
+    .brand-sub   { color: var(--muted); font-size: .85rem }
+
+    /* CTA */
+    .cta-center { display: flex; justify-content: center; margin-top: 2rem }
+    .cta {
+      display: inline-flex; align-items: center; gap: .7rem;
+      background: linear-gradient(135deg, #FFB347 0%, #FF8700 40%, #E07600 75%, #C06400 100%);
+      color: #1A0900;
+      padding: 1.2rem 3rem;
+      border-radius: 16px;
+      font-weight: 900; font-size: 1.15rem; letter-spacing: .15px;
+      box-shadow:
+        0 0 0 1px rgba(255,135,0,.24),
+        0 0 28px rgba(255,135,0,.30),
+        0 8px 22px rgba(224,118,0,.26),
+        0 20px 48px rgba(192,100,0,.20);
+      border: none; cursor: pointer; text-decoration: none;
+      transition: transform .18s, box-shadow .18s, filter .18s;
+    }
+    .cta:hover {
+      transform: translateY(-3px) scale(1.025); filter: brightness(1.07);
+      color: #1A0900; text-decoration: none;
+      box-shadow:
+        0 0 0 1px rgba(255,135,0,.40),
+        0 0 40px rgba(255,135,0,.44),
+        0 10px 28px rgba(224,118,0,.36),
+        0 26px 58px rgba(192,100,0,.28);
+    }
+
+    /* NOTE */
+    .note {
+      border-left: 3px solid var(--o);
+      padding: .8rem 1rem;
+      background: rgba(224,118,0,.07);
+      border-radius: 0 9px 9px 0;
+      color: var(--sub); margin-top: 1rem;
+    }
+
+    /* STEPS */
+    section.step-guide {
+      padding: clamp(2rem,5vw,3.5rem) 0;
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    }
+    .steps { display: grid; gap: var(--gap); grid-template-columns: 1fr }
+    .step {
+      background: var(--card); border: 1px solid var(--line);
+      border-top: 2px solid rgba(255,135,0,.28); border-radius: var(--r);
+      padding: 1.25rem; box-shadow: var(--sh); transition: transform .18s, box-shadow .18s;
+    }
+    .step:hover { transform: translateY(-3px); box-shadow: var(--sh), var(--sho) }
+    .step .icon {
+      width: 44px; height: 44px; border-radius: 9px;
+      display: inline-grid; place-items: center;
+      background: rgba(224,118,0,.11); margin-bottom: .65rem;
+      font-weight: 800; font-size: .95rem; color: var(--o);
+      border: 1px solid rgba(255,135,0,.22);
+    }
+
+    /* CARD */
+    main { padding-top: .5rem }
+    main .card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--r); padding: 1.5rem; margin: 1.2rem 0; box-shadow: var(--sh);
+    }
+    main .card > h2:first-child { margin-top: 0; border-top: none; padding-top: 0 }
+
+    /* TOC */
+    .toc { border: 1px solid var(--lo); background: rgba(224,118,0,.05); border-radius: var(--r); padding: 1.1rem 1.3rem }
+    .toc strong { color: var(--ink) }
+    .toc ul { margin: .5rem 0 0; padding-left: 1.1rem }
+    .toc li { margin: .28rem 0; font-size: .96rem }
+    .toc a { font-weight: 600 }
+
+    /* GRID */
+    .grid-2 { display: grid; gap: var(--gap); grid-template-columns: 1fr }
+    .callout-grid { display: grid; gap: var(--gap); grid-template-columns: 1fr; margin-top: .8rem }
+    .mini { background: rgba(255,255,255,.02); border: 1px solid var(--line); border-radius: var(--r); padding: 1rem }
+    .mini h3 { margin-bottom: .35rem }
+    .kpi-badges { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: .55rem }
+    .kpi-badges span {
+      border: 1px solid rgba(255,135,0,.22); background: rgba(224,118,0,.09);
+      color: var(--sub); padding: .26rem .54rem;
+      border-radius: 999px; font-size: .87rem; font-weight: 600;
+    }
+
+    /* TABLE */
+    .table-wrap { overflow-x: auto; border-radius: var(--r); border: 1px solid var(--line) }
+    table { width: 100%; border-collapse: collapse; min-width: 480px }
+    th,td { padding: .8rem .95rem; border-bottom: 1px solid var(--line); text-align: left }
+    th { background: rgba(224,118,0,.07); color: var(--ink); font-weight: 700; font-size: .93rem }
+    tr.hi { background: rgba(224,118,0,.04) }
+    tr:hover td { background: rgba(255,255,255,.018) }
+    tr:last-child td { border-bottom: none }
+    .ok { color: var(--ok) } .warn { color: var(--warn) } .err { color: var(--err) }
+
+    /* EEAT */
+    .eeat { background: var(--card); border: 1px solid var(--lo); border-radius: var(--r); padding: 1.5rem; box-shadow: var(--sh) }
+    .eeat > h2:first-child { margin-top: 0; border-top: none; padding-top: 0 }
+
+    /* FAQ */
+    .faq-item { border-bottom: 1px solid var(--line); padding: .9rem 0 }
+    .faq-item:last-child { border-bottom: none }
+    .faq-button { all: unset; display: flex; justify-content: space-between; align-items: flex-start; width: 100%; cursor: pointer; gap: 1rem }
+    .faq-button:focus-visible { outline: 2px solid var(--o); border-radius: 4px }
+    .faq-button h3 { margin: 0; font-weight: 700; font-size: 1rem; line-height: 1.4 }
+    .faq-content { max-height: 0; overflow: hidden; transition: max-height .26s ease }
+    .faq-content.open { padding-top: .65rem }
+    .faq-plus { font-weight: 800; font-size: 1.35rem; color: var(--o); flex: 0 0 auto; line-height: 1; transition: transform .2s }
+    .faq-button[aria-expanded="true"] .faq-plus { transform: rotate(45deg) }
+
+    @media(min-width:860px){
+      .steps { grid-template-columns: repeat(4,1fr) }
+      .grid-2 { grid-template-columns: 1fr 1fr }
+      .callout-grid { grid-template-columns: 1fr 1fr }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero" role="banner">
+  <div class="container">
+    <div class="hero-card">
+      <div class="brand-row">
+        <img class="brand-logo" src="bl.jpg" alt="Blur NFT logo">
+        <div>
+          <div class="brand-label">Complete Pro Trader Guide</div>
+          <div class="brand-sub">NFT Marketplace · Sweeping · Collection Bids · BLUR Token · Blend Lending</div>
+        </div>
+      </div>
+
+      <h1>Blur NFT Marketplace</h1>
+      <p class="lead" style="margin-top:.7rem">
+        The complete guide to <strong>Blur</strong> — the pro-focused NFT marketplace
+        that overtook OpenSea in trading volume by giving serious collectors and traders
+        the tools they actually need: <strong>real-time floor price tracking</strong>,
+        <strong>collection-wide bidding</strong>, <strong>multi-collection sweeping</strong>,
+        <strong>portfolio analytics</strong>, and the <strong>BLUR token</strong>
+        reward system that turned NFT trading into a yield-generating activity.
+        Plus a deep dive into <strong>Blend</strong> — Blur's NFT-backed
+        lending protocol that lets you borrow ETH against your NFTs without selling.
+      </p>
+
+      <div class="cta-center">
+        <a href="#" class="cta" aria-label="Open Blur NFT Marketplace">
+          <span>◈</span> Open Blur Marketplace
+        </a>
+      </div>
+
+      <div class="note">
+        <strong>Why Blur disrupted the NFT market:</strong> OpenSea was built for retail collectors.
+        Blur was built for traders — zero marketplace fees, real-time price data,
+        batch transactions, and token incentives for market-making activity.
+        By 2023 Blur commanded the majority of Ethereum NFT trading volume
+        by giving professional participants tools that simply didn't exist before.
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- STEPS -->
+<section class="step-guide" aria-labelledby="how-works">
+  <div class="container">
+    <h2 id="how-works" style="margin-top:0;border-top:none;padding-top:0">
+      How Blur Works: Connect → Analyse → Bid or Sweep → Earn BLUR
+    </h2>
+    <div class="steps" role="list">
+      <article class="step" role="listitem">
+        <div class="icon">01</div>
+        <h3>Connect wallet and import portfolio</h3>
+        <p>Connect your Ethereum wallet and Blur instantly imports your entire NFT portfolio with real-time floor price valuations, unrealised P&amp;L, and collection analytics. No manual entry — your positions are visible immediately.</p>
+      </article>
+      <article class="step" role="listitem">
+        <div class="icon">02</div>
+        <h3>Analyse collections with pro data</h3>
+        <p>Each collection page shows real-time floor price, trait floor prices, depth-of-book (listings at each price tier), sale velocity, and unique holder stats. This is the data layer professional NFT traders need for informed decisions.</p>
+      </article>
+      <article class="step" role="listitem">
+        <div class="icon">03</div>
+        <h3>Sweep the floor or place collection bids</h3>
+        <p>Sweep multiple NFTs from a collection in one transaction, or place collection-wide bids (offers on any item from a collection) at your desired price. Both mechanisms are core to Blur's liquidity model and BLUR reward structure.</p>
+      </article>
+      <article class="step" role="listitem">
+        <div class="icon">04</div>
+        <h3>Earn BLUR token rewards</h3>
+        <p>Blur distributes BLUR tokens to users who provide liquidity through listings and collection bids. The closer your bid is to the floor price, the more BLUR points you earn — incentivising tight market-making that benefits the entire ecosystem.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main class="container" role="main">
+
+  <!-- TOC -->
+  <section class="card toc" aria-label="Table of Contents">
+    <strong>On this page — Blur NFT Marketplace:</strong>
+    <ul>
+      <li><a href="#overview">What is Blur and how it changed the NFT marketplace landscape</a></li>
+      <li><a href="#sweeping">Sweeping: how to buy multiple NFTs in one transaction</a></li>
+      <li><a href="#bidding">Collection bidding: how Blur's liquidity model works</a></li>
+      <li><a href="#analytics">Portfolio analytics and real-time market data</a></li>
+      <li><a href="#blur-token">BLUR token: airdrop seasons, earning, and governance</a></li>
+      <li><a href="#blend">Blend: NFT-backed lending protocol explained</a></li>
+      <li><a href="#royalties">Royalties on Blur: what creators and collectors need to know</a></li>
+      <li><a href="#fees">Blur fee structure vs OpenSea and other marketplaces</a></li>
+      <li><a href="#safety">Blur security and NFT trading risks</a></li>
+      <li><a href="#comparison">Blur vs OpenSea vs LooksRare vs X2Y2: marketplace comparison</a></li>
+      <li><a href="#best-practices">Best practices for trading on Blur</a></li>
+      <li><a href="#troubleshooting">Troubleshooting: failed sweeps, stuck bids, missing NFTs</a></li>
+      <li><a href="#eeat">Authoritative sources &amp; references</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="card" id="overview">
+    <h2>What Is Blur and How It Changed the NFT Marketplace Landscape</h2>
+    <p>
+      <strong>Blur</strong> launched in October 2022 with a single clear thesis:
+      the NFT marketplace market was being underserved for professional traders.
+      OpenSea's 2.5% fee, slow interface, and absence of market-making tools
+      created an opening for a trader-first alternative.
+    </p>
+    <p>
+      Blur's combination of <strong>zero marketplace fees</strong>, real-time analytics,
+      batch sweeping, collection-wide bidding, and BLUR token incentives for liquidity provision
+      rapidly attracted the traders responsible for the majority of NFT volume.
+      By early 2023, Blur had surpassed OpenSea in weekly trading volume —
+      a displacement that reshaped the entire NFT ecosystem's fee and royalty expectations.
+    </p>
+
+    <div class="callout-grid">
+      <div class="mini">
+        <h3>For professional NFT traders</h3>
+        <p style="color:var(--muted)">Real-time depth-of-book data, trait-level floor prices, batch sweeping in single transactions, collection-wide bidding, instant portfolio P&amp;L — Blur is the Bloomberg Terminal equivalent for NFT markets.</p>
+        <div class="kpi-badges"><span>Zero fees</span><span>Real-time data</span><span>Batch TX</span></div>
+      </div>
+      <div class="mini">
+        <h3>For NFT collectors</h3>
+        <p style="color:var(--muted)">List on Blur alongside other marketplaces simultaneously (multi-listing), get competitive bids from Blur's active market-making community, and access floor sweeps on popular collections at the best available prices without paying marketplace commission.</p>
+        <div class="kpi-badges"><span>Multi-listing</span><span>Competitive bids</span><span>Best prices</span></div>
+      </div>
+      <div class="mini">
+        <h3>For NFT liquidity providers</h3>
+        <p style="color:var(--muted)">Earn BLUR token rewards by providing two-sided liquidity — listing NFTs at competitive prices and placing collection bids near the floor. The reward structure means active market-making generates additional BLUR yield on top of any trading profits.</p>
+        <div class="kpi-badges"><span>BLUR rewards</span><span>Market-making yield</span><span>LP incentives</span></div>
+      </div>
+      <div class="mini">
+        <h3>For NFT-backed borrowers</h3>
+        <p style="color:var(--muted)">Blend (Blur's lending protocol) lets you use your NFTs as collateral for ETH loans — accessing liquidity without selling. Borrow against your Bored Apes, Pudgy Penguins, or other supported collections at competitive rates from a peer-to-peer lending market.</p>
+        <div class="kpi-badges"><span>NFT collateral</span><span>ETH loans</span><span>Blend protocol</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SWEEPING -->
+  <section class="card" id="sweeping">
+    <h2>Sweeping: How to Buy Multiple NFTs From a Collection in One Transaction</h2>
+    <p>
+      <strong>Sweeping</strong> is the act of purchasing multiple NFTs from the same collection
+      in a single transaction — buying up the floor from cheapest to most expensive.
+      Blur's sweeping interface was one of its landmark features at launch,
+      allowing traders to accumulate floor positions efficiently.
+    </p>
+
+    <div class="callout-grid">
+      <div class="mini">
+        <h3>How to sweep on Blur</h3>
+        <p style="color:var(--muted)">On any collection page, the floor listing view shows items sorted cheapest first. Drag the sweep slider or enter a quantity/max price to select multiple items. Blur batches all selected purchases into a single Ethereum transaction — saving gas compared to individual purchases.</p>
+        <div class="kpi-badges"><span>Drag-to-select</span><span>Single TX</span><span>Gas efficient</span></div>
+      </div>
+      <div class="mini">
+        <h3>Cross-marketplace sweeping</h3>
+        <p style="color:var(--muted)">Blur aggregates listings from multiple marketplaces (OpenSea, LooksRare, X2Y2) in addition to its own. A sweep can execute against the cheapest items available across all integrated platforms — ensuring you always get the absolute floor regardless of where each item is listed.</p>
+        <div class="kpi-badges"><span>Multi-marketplace</span><span>True floor price</span><span>Aggregated</span></div>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>Sweeping and BLUR rewards:</strong> Floor sweeps earn BLUR points as part of Blur's
+      liquidity incentive programme — the more volume you generate through sweeping activity,
+      the more BLUR points accumulate toward the next airdrop season allocation.
+      Large sweeps on high-volume collections earn proportionally more points.
+    </div>
+  </section>
+
+  <!-- BIDDING -->
+  <section class="card" id="bidding">
+    <h2>Collection Bidding: How Blur's Liquidity Model and Bid Pool Work</h2>
+    <p>
+      <strong>Collection bidding</strong> is Blur's most distinctive innovation —
+      the ability to place a single bid that applies to <em>any</em> item from a collection,
+      not a specific token ID. Sellers who want instant liquidity can accept collection bids
+      at any time — similar to a DEX liquidity pool for NFTs.
+    </p>
+
+    <div class="table-wrap">
+      <table aria-label="Bidding mechanics">
+        <thead>
+          <tr><th>Bid type</th><th>How it works</th><th>Best for</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hi">
+            <td>Collection bid</td>
+            <td>Offer price applied to any item in the collection — seller picks which item to sell into your bid</td>
+            <td>Accumulating floor exposure; market-making for BLUR rewards</td>
+          </tr>
+          <tr>
+            <td>Trait bid</td>
+            <td>Offer price applied to any item with a specific trait (e.g. "Golden Fur" BAYC)</td>
+            <td>Targeting specific rarity tiers without buying blind</td>
+          </tr>
+          <tr class="hi">
+            <td>Token-specific bid</td>
+            <td>Traditional offer on a single specific NFT token ID</td>
+            <td>Targeting a specific piece you've identified as undervalued</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <strong>The bid depth view:</strong> Blur's collection page shows a visual
+      depth-of-book for bids — how many ETH worth of bids exist at each price level below floor.
+      Deep bid depth signals strong community conviction and provides downside support for the floor.
+      Thin bid depth below floor is a liquidity warning for potential sellers.
+    </div>
+  </section>
+
+  <!-- ANALYTICS -->
+  <section class="card" id="analytics">
+    <h2>Portfolio Analytics and Real-Time Market Data on Blur</h2>
+    <p>
+      Blur's analytics layer is what separates it from retail-focused NFT marketplaces —
+      providing the data professional traders need to make informed decisions
+      at the pace of an active market.
+    </p>
+
+    <div class="table-wrap">
+      <table aria-label="Analytics features">
+        <thead>
+          <tr><th>Feature</th><th>What it shows</th><th>Why it matters</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hi">
+            <td>Real-time floor tracking</td>
+            <td>Live floor price updates as new listings appear or get swept</td>
+            <td>Instant awareness of price changes without page refresh</td>
+          </tr>
+          <tr>
+            <td>Depth of book</td>
+            <td>Listings at each price tier above floor; bids at each level below floor</td>
+            <td>Assess true liquidity — how many items before the next price resistance</td>
+          </tr>
+          <tr class="hi">
+            <td>Trait floor prices</td>
+            <td>Floor price per trait category across the collection</td>
+            <td>Identify which traits are underpriced relative to their historical premium</td>
+          </tr>
+          <tr>
+            <td>Portfolio P&amp;L</td>
+            <td>Unrealised gains/losses on all held NFTs vs current floor or last sale</td>
+            <td>See your NFT portfolio performance at a glance without manual calculation</td>
+          </tr>
+          <tr class="hi">
+            <td>Sale history &amp; velocity</td>
+            <td>Recent sales, time between sales, and volume trends</td>
+            <td>Gauge collection activity — dying collections have widening sale intervals</td>
+          </tr>
+          <tr>
+            <td>Unique holder count</td>
+            <td>Number of distinct wallets holding items from the collection</td>
+            <td>High concentration in few wallets signals manipulation or accumulation risk</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- BLUR TOKEN -->
+  <section class="card" id="blur-token">
+    <h2>BLUR Token: Airdrop Seasons, How to Earn, and Governance</h2>
+    <p>
+      <strong>BLUR</strong> is Blur's native token distributed to platform participants
+      through seasonal airdrop programmes. Unlike straightforward usage rewards,
+      Blur's distribution is designed to incentivise specific behaviours
+      that improve marketplace liquidity — particularly collection bidding.
+    </p>
+
+    <div class="callout-grid">
+      <div class="mini">
+        <h3>How BLUR points are earned</h3>
+        <p style="color:var(--muted)">Points accrue through: listing NFTs on Blur at competitive prices, placing collection bids (rewarded most heavily — especially bids close to the floor), sweeping floor items, and generally providing two-sided liquidity. The point system weights collection bidding most heavily because it's the hardest liquidity to provide.</p>
+        <div class="kpi-badges"><span>Listings</span><span>Collection bids</span><span>Floor sweeps</span></div>
+      </div>
+      <div class="mini">
+        <h3>Airdrop seasons</h3>
+        <p style="color:var(--muted)">BLUR tokens are distributed at the end of each season proportional to points earned. Season 1 distributed to historical users; Season 2 rewarded active bidders; subsequent seasons continued rewarding ongoing liquidity provision. Each season's allocation and rules are announced officially by the Blur team.</p>
+        <div class="kpi-badges"><span>Seasonal distribution</span><span>Points-based</span><span>Proportional</span></div>
+      </div>
+    </div>
+
+    <div class="table-wrap" style="margin-top:1rem">
+      <table aria-label="BLUR token utility">
+        <thead>
+          <tr><th>Function</th><th>How BLUR is used</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hi">
+            <td>Governance</td>
+            <td>BLUR holders vote on Blur DAO proposals — marketplace parameters, fee policies, Blend rates, and ecosystem grants</td>
+          </tr>
+          <tr>
+            <td>Liquidity incentive</td>
+            <td>BLUR is distributed as the incentive for market-making activity — creating yield for professional liquidity providers</td>
+          </tr>
+          <tr class="hi">
+            <td>Ecosystem participation</td>
+            <td>BLUR holders can participate in governance decisions that shape the evolution of both the marketplace and the Blend lending protocol</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <strong>BLUR farming dynamics:</strong> Blur's point system created a meta-game where
+      traders place collection bids at or near floor primarily to earn BLUR points —
+      not necessarily because they want to buy those NFTs. This bid farming inflated
+      apparent bid depth in some collections. Evaluate bid depth with this dynamic in mind
+      when assessing genuine demand vs incentive-driven activity.
+    </div>
+  </section>
+
+  <!-- BLEND -->
+  <section class="card" id="blend">
+    <h2>Blend: NFT-Backed Lending Protocol — Borrow ETH Against Your NFTs</h2>
+    <p>
+      <strong>Blend</strong> (Blur Lending) is Blur's peer-to-peer NFT-backed lending protocol,
+      launched in May 2023. It allows NFT holders to borrow ETH using their NFTs as collateral —
+      without selling their assets or requiring a price oracle.
+    </p>
+
+    <div class="callout-grid">
+      <div class="mini">
+        <h3>How Blend works for borrowers</h3>
+        <p style="color:var(--muted)">Deposit a supported NFT as collateral and receive ETH from a lender at an agreed interest rate. Keep your NFT exposure while accessing liquidity. Repay the loan plus interest within the term to retrieve your NFT. If you don't repay, the lender can trigger a liquidation auction.</p>
+        <div class="kpi-badges"><span>NFT collateral</span><span>ETH liquidity</span><span>Keep exposure</span></div>
+      </div>
+      <div class="mini">
+        <h3>How Blend works for lenders</h3>
+        <p style="color:var(--muted)">Earn interest by offering ETH loans against NFT collateral. If the borrower defaults, you receive the NFT at a discount through a liquidation process. Lending on Blend requires careful assessment of NFT collateral quality — floor price volatility directly affects your collateral value.</p>
+        <div class="kpi-badges"><span>Interest income</span><span>NFT acquisition</span><span>Default protection</span></div>
+      </div>
+    </div>
+
+    <div class="table-wrap" style="margin-top:1rem">
+      <table aria-label="Blend key mechanics">
+        <thead>
+          <tr><th>Mechanic</th><th>How it works</th><th>Risk involved</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hi">
+            <td>No oracle pricing</td>
+            <td>Loan terms are negotiated peer-to-peer — no price oracle needed</td>
+            <td class="ok">Reduces oracle manipulation risk but requires manual valuation</td>
+          </tr>
+          <tr>
+            <td>Refinancing</td>
+            <td>Lenders can call loans; borrowers have 30 hours to refinance or repay</td>
+            <td class="warn">Sudden refinancing calls in a fast-falling floor = forced sale risk</td>
+          </tr>
+          <tr class="hi">
+            <td>Liquidation auction</td>
+            <td>If loan isn't repaid, Dutch auction determines clearing price for the NFT</td>
+            <td class="warn">Floor collapse can leave lenders under-collateralised in falling markets</td>
+          </tr>
+          <tr>
+            <td>Perpetual loans</td>
+            <td>No fixed repayment date — loans continue until lender calls or borrower repays</td>
+            <td class="warn">Indefinite ETH illiquidity for lenders if borrower never repays</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <strong>Blend risk for both sides:</strong> NFT-backed lending introduces compounding risk —
+      if a collection's floor crashes while loans are open, borrowers face
+      liquidation of their NFTs and lenders may recover less than the loan value.
+      The 2023 market showed how quickly these dynamics can cascade in thin markets.
+      Only borrow against NFTs you can afford to lose, and only lend what you'd accept
+      to receive as NFT collateral at the current floor.
+    </div>
+  </section>
+
+  <!-- ROYALTIES -->
+  <section class="card" id="royalties">
+    <h2>Royalties on Blur: What Creators and Collectors Need to Know</h2>
+    <p>
+      Royalties are the most controversial aspect of Blur's market impact.
+      Blur's approach to creator royalties has evolved through multiple policy changes
+      and remains a central tension in the NFT ecosystem.
+    </p>
+
+    <div class="table-wrap">
+      <table aria-label="Royalty policy overview">
+        <thead>
+          <tr><th>Policy aspect</th><th>Blur's approach</th><th>Impact</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hi">
+            <td>Royalty enforcement</td>
+            <td>Optional royalties — sellers choose whether to pay; some collections enforce on-chain via operator filters</td>
+            <td class="warn">Reduced creator royalty income on many collections vs OpenSea's historical enforcement</td>
+          </tr>
+          <tr>
+            <td>On-chain enforcement</td>
+            <td>Collections using operator filter registries can enforce royalties even on Blur</td>
+            <td class="ok">Creators who deploy enforcement mechanisms receive royalties</td>
+          </tr>
+          <tr class="hi">
+            <td>Blur's stated position</td>
+            <td>Marketplace-level enforcement is a competitive disadvantage; on-chain enforcement is the sustainable solution</td>
+            <td class="warn">Shifted royalty responsibility from marketplace to contract-level</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <strong>For creators:</strong> If royalty revenue is critical to your project,
+      implement on-chain royalty enforcement at the contract level — not relying solely
+      on marketplace goodwill. Several standards (EIP-2981, operator filter registries,
+      and newer enforcement mechanisms) enable contract-level royalties that any
+      marketplace must honour.
+    </div>
+  </section>
+
+  <!-- FEES -->
+  <section class="card" id="fees">
+    <h2>Blur Fee Structure vs OpenSea and Other NFT Marketplaces</h2>
+
+    <div class="table-wrap">
+      <table aria-label="Marketplace fee comparison">
+        <thead>
+          <tr><th>Marketplace</th><th>Marketplace fee</th><th>Creator royalty</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hi">
+            <td><strong>Blur</strong></td>
+            <td class="ok">0% (zero)</td>
+            <td class="warn">Optional (0.5% min if enabled)</td>
+            <td>Zero fees is core to Blur's trader-first positioning</td>
+          </tr>
+          <tr>
+            <td>OpenSea</td>
+            <td class="warn">0.5–2.5%</td>
+            <td class="warn">Optional (after policy changes)</td>
+            <td>Reduced fees post-Blur competition; royalties now optional</td>
+          </tr>
+          <tr class="hi">
+            <td>LooksRare</td>
+            <td class="warn">2%</td>
+            <td class="warn">Optional</td>
+            <td>LOOKS token rewards for trading; significant wash-trade history</td>
+          </tr>
+          <tr>
+            <td>X2Y2</td>
+            <td class="warn">0.5%</td>
+            <td class="warn">Optional</td>
+            <td>Low fees; declined significantly after Blur launch</td>
+          </tr>
+          <tr class="hi">
+            <td>Foundation</td>
+            <td class="warn">5%</td>
+            <td class="ok">10% enforced</td>
+            <td>Curated art platform; highest creator royalties — different audience</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SAFETY -->
+  <section class="card" id="safety">
+    <h2>Blur Security and NFT Trading Risks</h2>
+
+    <div class="table-wrap">
+      <table aria-label="Security risks">
+        <thead>
+          <tr><th>Risk</th><th>Level</th><th>Mitigation</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hi">
+            <td>Smart-contract exploit (Blur)</td>
+            <td class="warn">Low-Medium</td>
+            <td>Multiple audits; large battle-tested TVL; bug bounty programme</td>
+          </tr>
+          <tr>
+            <td>Smart-contract exploit (Blend)</td>
+            <td class="warn">Medium</td>
+            <td>Blend is newer — additional surface area; audited but less battle-tested</td>
+          </tr>
+          <tr class="hi">
+            <td>NFT floor collapse (Blend lenders)</td>
+            <td class="err">High in volatile markets</td>
+            <td>Only lend against collections with deep, stable floors; maintain collateral buffer</td>
+          </tr>
+          <tr>
+            <td>Bid farming wash trading</td>
+            <td class="warn">Medium</td>
+            <td>BLUR point incentives attract bid farming — evaluate genuine demand vs incentive bids</td>
+          </tr>
+          <tr class="hi">
+            <td>Phishing / fake Blur sites</td>
+            <td class="err">High (user-controlled)</td>
+            <td>Bookmark official blur.io; verify domain before every wallet connection</td>
+          </tr>
+          <tr>
+            <td>Stale token approvals</td>
+            <td class="warn">Medium</td>
+            <td>Revoke Blur contract approvals after major trading sessions via Revoke.cash</td>
+          </tr>
+          <tr class="hi">
+            <td>Counterfeit NFT collections</td>
+            <td class="warn">Medium</td>
+            <td>Always verify contract address matches the official collection — not just the name</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section class="card" id="comparison">
+    <h2>Blur vs OpenSea vs LooksRare vs X2Y2: NFT Marketplace Comparison</h2>
+
+    <div class="table-wrap">
+      <table aria-label="NFT marketplace comparison">
+        <thead>
+          <tr><th>Feature</th><th>Blur</th><th>OpenSea</th><th>LooksRare</th><th>X2Y2</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hi">
+            <td>Target user</td>
+            <td class="ok">Pro traders</td>
+            <td class="warn">Retail collectors</td>
+            <td class="warn">Token farmers</td>
+            <td class="warn">Low-fee traders</td>
+          </tr>
+          <tr>
+            <td>Marketplace fee</td>
+            <td class="ok">0%</td>
+            <td class="warn">0.5–2.5%</td>
+            <td class="warn">2%</td>
+            <td class="ok">0.5%</td>
+          </tr>
+          <tr class="hi">
+            <td>Collection bidding</td>
+            <td class="ok">Yes — core feature</td>
+            <td class="warn">Basic offers only</td>
+            <td class="err">No</td>
+            <td class="err">No</td>
+          </tr>
+          <tr>
+            <td>Batch sweeping</td>
+            <td class="ok">Yes — with aggregation</td>
+            <td class="warn">Limited</td>
+            <td class="warn">Limited</td>
+            <td class="warn">Limited</td>
+          </tr>
+          <tr class="hi">
+            <td>NFT lending</td>
+            <td class="ok">Yes — Blend protocol</td>
+            <td class="err">No</td>
+            <td class="err">No</td>
+            <td class="err">No</td>
+          </tr>
+          <tr>
+            <td>Real-time analytics</td>
+            <td class="ok">Pro-grade data</td>
+            <td class="warn">Basic</td>
+            <td class="warn">Basic</td>
+            <td class="warn">Basic</td>
+          </tr>
+          <tr class="hi">
+            <td>Token rewards</td>
+            <td class="ok">BLUR — liquidity-based</td>
+            <td class="err">None</td>
+            <td class="warn">LOOKS — volume-based</td>
+            <td class="warn">X2Y2 — volume-based</td>
+          </tr>
+          <tr>
+            <td>Trading volume dominance</td>
+            <td class="ok">Majority of ETH NFT volume</td>
+            <td class="warn">Declining</td>
+            <td class="err">Minimal</td>
+            <td class="err">Minimal</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- BEST PRACTICES -->
+  <section class="card" id="best-practices">
+    <h2>Best Practices for Trading on Blur</h2>
+    <ul style="padding-left:1.2rem">
+      <li style="margin-bottom:.5rem"><strong>Always verify collection contract addresses</strong> — Blur lists collections by name, but fake collections with similar names are common in rising markets. Cross-reference the contract address with the project's official announcement or Etherscan.</li>
+      <li style="margin-bottom:.5rem"><strong>Use the depth-of-book to assess real liquidity</strong> — count how many ETH of genuine bids sit below floor vs BLUR-farming bids. A floor supported only by point-farming bids is far weaker than one backed by genuine accumulation demand.</li>
+      <li style="margin-bottom:.5rem"><strong>Set collection bid ranges carefully</strong> — bids too close to floor earn more BLUR points but also carry higher fill risk in a falling market. Bid depth that fills your wallet with NFTs in a down-trend can lock significant capital.</li>
+      <li style="margin-bottom:.5rem"><strong>For Blend borrowing: maintain a buffer above liquidation</strong> — don't borrow the maximum LTV against your NFT. Floor prices move fast in volatile markets; a buffer buys you time to refinance or repay before liquidation.</li>
+      <li style="margin-bottom:.5rem"><strong>For Blend lending: only lend against collections with proven floor stability</strong> — the highest-yielding loans are against the most illiquid collateral. Lend against blue-chip collections with deep bid depth if capital preservation matters.</li>
+      <li style="margin-bottom:.5rem"><strong>Revoke Blur contract approvals periodically</strong> — especially after large trading sessions. Use Revoke.cash to manage open NFT contract approvals.</li>
+      <li><strong>Bookmark blur.io directly</strong> — never access Blur via a link in a DM or social post. The platform handles high-value NFT transactions and is a persistent phishing target.</li>
+    </ul>
+  </section>
+
+  <!-- TROUBLESHOOTING -->
+  <section class="card" id="troubleshooting">
+    <h2>Troubleshooting Blur: Failed Sweeps, Stuck Bids, and Missing NFTs</h2>
+
+    <h3>"My sweep transaction failed"</h3>
+    <ul style="padding-left:1.2rem">
+      <li>The most common cause is one or more items in your sweep being purchased by another buyer between your transaction submission and on-chain inclusion — NFT marketplaces are highly competitive and front-running is common at popular floors.</li>
+      <li>Check your transaction on Etherscan for the specific revert reason. If the failure was due to a conflict, simply re-sweep with updated selection.</li>
+      <li>Ensure your ETH balance covers the full sweep amount plus gas — insufficient funds for the entire batch will cause the transaction to fail.</li>
+    </ul>
+
+    <h3>"My collection bid was filled but I didn't want that item"</h3>
+    <ul style="padding-left:1.2rem">
+      <li>Collection bids are executed by sellers against any item in the collection — you cannot control which specific NFT fills your bid. If you want to avoid certain items (low rarity, specific traits), use trait bids instead of collection-wide bids.</li>
+      <li>List the unwanted item immediately if you don't want to hold it — Blur's zero-fee structure makes quick relisting cost-effective.</li>
+    </ul>
+
+    <h3>"An NFT I sold doesn't appear to have transferred"</h3>
+    <ul style="padding-left:1.2rem">
+      <li>Verify the sale transaction on Etherscan using your wallet address — confirm the NFT transfer event occurred on-chain. If the transaction succeeded, the NFT has transferred regardless of how your wallet displays it.</li>
+      <li>If the sale transaction failed on-chain (rare), the NFT remains in your wallet. Check Blur's transaction history for your address to see the definitive sale status.</li>
+    </ul>
+
+    <div class="note">
+      <strong>Etherscan is ground truth:</strong> For any Blur transaction dispute or confusion,
+      verify the on-chain state via Etherscan before contacting support.
+      The Blur UI may occasionally lag behind on-chain state during high-traffic periods.
+    </div>
+  </section>
+
+  <!-- EEAT -->
+  <section class="eeat" id="eeat" aria-labelledby="eeat-title">
+    <h2 id="eeat-title">Blur NFT Marketplace: Authoritative References &amp; External Sources</h2>
+
+    <h3>Blur — Official Sources</h3>
+    <ul style="padding-left:1.2rem">
+      <li><a href="https://blur.io/" target="_blank" rel="noopener nofollow">Blur — Official NFT Marketplace</a></li>
+      <li><a href="https://docs.blur.io/" target="_blank" rel="noopener nofollow">Blur — Official Documentation</a></li>
+      <li><a href="https://github.com/blur-io" target="_blank" rel="noopener nofollow">Blur — Smart Contracts (GitHub)</a></li>
+    </ul>
+
+    <h3>NFT Market Data &amp; Analytics</h3>
+    <ul style="padding-left:1.2rem">
+      <li><a href="https://dune.com/browse/dashboards" target="_blank" rel="noopener nofollow">Dune Analytics — NFT Marketplace Volume Dashboards</a></li>
+      <li><a href="https://defillama.com/nfts" target="_blank" rel="noopener nofollow">DeFiLlama — NFT Marketplace Volume Data</a></li>
+      <li><a href="https://nftgo.io/" target="_blank" rel="noopener nofollow">NFTGo — NFT Market Analytics</a></li>
+    </ul>
+
+    <h3>NFT Standards &amp; Security</h3>
+    <ul style="padding-left:1.2rem">
+      <li><a href="https://eips.ethereum.org/EIPS/eip-721" target="_blank" rel="noopener nofollow">EIP-721 — NFT Standard (Ethereum)</a></li>
+      <li><a href="https://eips.ethereum.org/EIPS/eip-2981" target="_blank" rel="noopener nofollow">EIP-2981 — NFT Royalty Standard</a></li>
+      <li><a href="https://revoke.cash/" target="_blank" rel="noopener nofollow">Revoke.cash — Token Approval Manager</a></li>
+      <li><a href="https://blog.openzeppelin.com/security-audits" target="_blank" rel="noopener nofollow">OpenZeppelin — Smart Contract Security Audits</a></li>
+    </ul>
+
+    <div class="note" style="margin-top:1.2rem">
+      <strong>About:</strong> Prepared by Crypto Finance Experts as a practical, SEO-oriented knowledge base for
+      <em>Blur NFT Marketplace</em>: sweeping, collection bidding, BLUR token, Blend lending, royalties, fee structure, analytics, and security.
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="card" id="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" style="margin-top:0;border-top:none;padding-top:0">Blur NFT Marketplace: Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-button" aria-expanded="false" aria-controls="f1" id="b1">
+        <h3>What is Blur and why did it overtake OpenSea in trading volume?</h3><span class="faq-plus">+</span>
+      </button>
+      <div id="f1" class="faq-content" role="region" aria-labelledby="b1">
+        <p>Blur is a professional NFT marketplace launched in October 2022, built specifically for active traders rather than casual collectors. It overtook OpenSea in volume by offering zero marketplace fees, real-time floor and depth data, batch sweeping, collection-wide bidding, and BLUR token rewards for liquidity provision. Professional traders who generate the majority of NFT volume migrated to Blur because the tools and economics were fundamentally superior for their use case.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-button" aria-expanded="false" aria-controls="f2" id="b2">
+        <h3>How do collection bids work on Blur?</h3><span class="faq-plus">+</span>
+      </button>
+      <div id="f2" class="faq-content" role="region" aria-labelledby="b2">
+        <p>A collection bid is an open offer to buy any NFT from a specific collection at your stated price. Unlike a token-specific offer, you don't target a particular item — any seller who wants instant liquidity can fill your bid with whichever item they choose. This creates a floor bid depth that functions similarly to a DEX liquidity pool. Collection bids earn the most BLUR points in Blur's reward system, particularly when placed close to the current floor price.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-button" aria-expanded="false" aria-controls="f3" id="b3">
+        <h3>What is the BLUR token and how do I earn it?</h3><span class="faq-plus">+</span>
+      </button>
+      <div id="f3" class="faq-content" role="region" aria-labelledby="b3">
+        <p>BLUR is Blur's governance and incentive token, distributed seasonally to users who provide marketplace liquidity. You earn BLUR points by: listing NFTs at competitive prices, placing collection bids (especially near the floor — this earns the most points), and sweeping floors. At the end of each season, accumulated points convert to BLUR token allocations proportional to your share of total points. BLUR also provides governance rights over the Blur DAO and Blend protocol parameters.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-button" aria-expanded="false" aria-controls="f4" id="b4">
+        <h3>What is Blend and how does NFT lending work?</h3><span class="faq-plus">+</span>
+      </button>
+      <div id="f4" class="faq-content" role="region" aria-labelledby="b4">
+        <p>Blend is Blur's peer-to-peer NFT lending protocol. As a borrower: deposit a supported NFT as collateral and receive ETH from a lender at an agreed interest rate, repay to retrieve your NFT. As a lender: offer ETH loans against NFT collateral and earn interest. The system has no price oracle — terms are negotiated peer-to-peer. Key risk: lenders can call loans (requiring repayment or refinancing within 30 hours), and NFT floor collapses can make collateral worth less than the outstanding loan.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-button" aria-expanded="false" aria-controls="f5" id="b5">
+        <h3>Does Blur pay creator royalties?</h3><span class="faq-plus">+</span>
+      </button>
+      <div id="f5" class="faq-content" role="region" aria-labelledby="b5">
+        <p>Blur's royalty policy makes royalties optional — sellers choose whether to include them, with a minimum of 0.5% if royalties are enabled. Collections that implement on-chain enforcement via operator filter registries or newer contract-level enforcement mechanisms can require royalties even on Blur. This shifted royalty responsibility from marketplace goodwill to contract-level enforcement — creators who want guaranteed royalties need to implement on-chain mechanisms rather than relying on marketplace policy.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-button" aria-expanded="false" aria-controls="f6" id="b6">
+        <h3>What are the fees on Blur?</h3><span class="faq-plus">+</span>
+      </button>
+      <div id="f6" class="faq-content" role="region" aria-labelledby="b6">
+        <p>Blur charges zero marketplace fees — this is its core competitive advantage over OpenSea (0.5–2.5%) and other platforms. You pay only Ethereum gas costs for transactions plus any creator royalty you choose to include. For high-volume traders, the absence of a marketplace percentage fee represents substantial savings — on $1M of trading volume, 2.5% would be $25,000 saved by using Blur instead of the old OpenSea fee structure.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-button" aria-expanded="false" aria-controls="f7" id="b7">
+        <h3>Can I use Blur and OpenSea at the same time?</h3><span class="faq-plus">+</span>
+      </button>
+      <div id="f7" class="faq-content" role="region" aria-labelledby="b7">
+        <p>Yes — Blur supports simultaneous multi-marketplace listings. You can list an NFT on Blur and OpenSea at the same time. When one marketplace sells the item, the listing on the other is automatically cancelled (on-chain cancellation may require a gas transaction depending on the listing type). Blur also aggregates listings from OpenSea and other platforms for sweeping — meaning you access the full combined floor, not just Blur's native listings.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-button" aria-expanded="false" aria-controls="f8" id="b8">
+        <h3>What is bid farming on Blur and should I be concerned?</h3><span class="faq-plus">+</span>
+      </button>
+      <div id="f8" class="faq-content" role="region" aria-labelledby="b8">
+        <p>Bid farming is the practice of placing collection bids near floor primarily to earn BLUR points rather than from genuine desire to own the NFTs. This inflates apparent bid depth — a collection may look well-supported by bids when in reality most bidders will quickly cancel if the floor falls toward their bid price. When assessing a collection's real demand on Blur, look for bid history and whether bids have actually been filled — genuine accumulation leaves a trail of completed transactions, not just open bids.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-button" aria-expanded="false" aria-controls="f9" id="b9">
+        <h3>How does Blur's sweeping feature work and what makes it useful?</h3><span class="faq-plus">+</span>
+      </button>
+      <div id="f9" class="faq-content" role="region" aria-labelledby="b9">
+        <p>Sweeping lets you buy multiple NFTs from a collection in a single Ethereum transaction — starting from the cheapest listing and working up. This is significantly more gas-efficient than individual purchases. Blur also aggregates listings from multiple marketplaces, so your sweep buys the actual global floor across platforms. Set your sweep quantity or max price, review selected items, and confirm one transaction. Sweeping also earns BLUR points proportional to your sweep volume.</p>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="container" role="contentinfo" style="padding:2.5rem 0; border-top:1px solid var(--line); margin-top:2rem">
+  <p style="color:var(--dim); font-size:.93rem">© 2026 Blur NFT Guide. Educational content with a security-first operational focus. Not financial advice.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-button').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        const c = document.getElementById(b.getAttribute('aria-controls'));
+        c.classList.remove('open'); c.style.maxHeight = '0';
+      });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        const content = document.getElementById(btn.getAttribute('aria-controls'));
+        content.classList.add('open');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
